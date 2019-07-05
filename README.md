@@ -1,7 +1,7 @@
 # Instagram-Stories
 Reusable Component for UIView 
 
-![](images/sren1.png)
+![](images/scren1.png)
 
 For use of this Component all u have to Do is download Files from given url and follow the steps as below.
 
