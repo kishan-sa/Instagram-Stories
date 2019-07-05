@@ -123,7 +123,7 @@ import UIKit
         }
     }
     
-    @IBInspectable var badgesize : CGFloat = 0.0{
+    @IBInspectable var badgesize : CGFloat = 10.0{
         didSet{
             setupImage()
         }
@@ -140,7 +140,7 @@ import UIKit
         imageview.translatesAutoresizingMaskIntoConstraints = false
         imageview.heightAnchor.constraint(equalToConstant: self.frame.height - 5).isActive = true
         imageview.widthAnchor.constraint(equalToConstant: self.frame.width - 5).isActive = true
-        imageview.layer.cornerRadius = self.layer.cornerRadius
+        imageview.layer.cornerRadius = self.layer.cornerRadius - 1
         imageview.clipsToBounds = true
         self.addSubview(imageview)
         imageview.centerXAnchor.constraint(equalToSystemSpacingAfter: self.centerXAnchor, multiplier: 1).isActive = true
@@ -157,8 +157,8 @@ import UIKit
         self.addSubview(badgeview)
         badgeview.heightAnchor.constraint(equalToConstant: badgesize).isActive = true
         badgeview.widthAnchor.constraint(equalToConstant: badgesize).isActive = true
-        self.addConstraint(NSLayoutConstraint(item: badgeview, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1.67, constant: 0))
-        self.addConstraint(NSLayoutConstraint(item: badgeview, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1.67,
+        self.addConstraint(NSLayoutConstraint(item: badgeview, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1.70, constant: 0))
+        self.addConstraint(NSLayoutConstraint(item: badgeview, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1.70,
             constant: 0))
         
     }
